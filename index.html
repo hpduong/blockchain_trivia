@@ -19,7 +19,7 @@
   </head>
 
   <body>
-
+<!--
     <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
       <a class="navbar-brand" href="#">Navbar</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
@@ -52,7 +52,7 @@
         </form>
       </div>
     </nav>
-
+-->
     <main role="main" class="container">
 
       <div class="main">
@@ -85,6 +85,33 @@
          </p>
       </div>
 
+    <div class="table-responsive">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Candidate</th>
+          <th>Votes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Anton</td>
+          <td id="candidate-1"></td>
+        </tr>
+        <tr>
+          <td>Gleb</td>
+          <td id="candidate-2"></td>
+        </tr>
+        <tr>
+          <td>Uliana</td>
+          <td id="candidate-3"></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <input type="text" id="candidate" />
+  <a href="#" onclick="voteForCandidate()" class="btn btn-primary">Vote</a>
+
     </main><!-- /.container -->
 
     <!-- Bootstrap core JavaScript
@@ -96,5 +123,7 @@
     <script src="./bootstrap-4.1.0/dist/js/bootstrap.min.js"></script>
     <script src="./scripts.js"></script>
     <script src="./notify.js"></script>
+    <script src="./index.js"></script>
+    <script src="https://cdn.rawgit.com/ethereum/web3.js/develop/dist/web3.js"></script>
   </body>
 </html>
