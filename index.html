@@ -7,14 +7,24 @@
     <meta name="author" content="">
     <link rel="icon" href="./favicon.ico">
 
-    <title>Starter Template for Bootstrap</title>
+    <title>Trivia King</title>
 
     <!-- Bootstrap core CSS -->
     <link href="./bootstrap-4.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="animate.css" rel="stylesheet">
-    <link href="main.css" rel="stylesheet">
+    <link href="./animate.css" rel="stylesheet">
+    <link href="./main.css" rel="stylesheet">
+
+    <script src="./jquery-3.3.1.js" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="./jquery-3.3.1.js"><\/script>')</script>
+    <script src="./bootstrap-4.1.0/assets/js/vendor/popper.min.js"></script>
+    <script src="./bootstrap-4.1.0/dist/js/bootstrap.min.js"></script>
+    <script src="./scripts.js"></script>
+    <script src="./notify.js"></script>
+    <script src="./index.js"></script>
+    <script src="https://cdn.rawgit.com/ethereum/web3.js/develop/dist/web3.js"></script>
+
 
   </head>
 
@@ -56,7 +66,7 @@
     <main role="main" class="container">
 
       <div class="main">
-        <h1>King of the Questions</h1>
+        <h1>Trivia King</h1>
         <p class="lead">Prove you're the top Trivia Boss!</p>
             <section class="container">
               <!--<button id="xhr">XHR</button>
@@ -76,7 +86,7 @@
             <li><button id="d" class = "select">Don't Pick Me</button></li>
             </ul>
             </section>
-            <p><br></p>
+            <p></p>
             <p id="right_wrong"></p>
             <div id="notifications"></div>
               <div class="card">
@@ -89,41 +99,46 @@
     <table class="table table-bordered">
       <thead>
         <tr>
-          <th>Candidate</th>
-          <th>Votes</th>
+          <th>Player</th>
+          <th>Score</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td>Anton</td>
+          <td id="wallet-address-1">Wallet ID</td>
           <td id="candidate-1"></td>
         </tr>
         <tr>
-          <td>Gleb</td>
+          <td id="wallet-address-2">Wallet ID</td>
           <td id="candidate-2"></td>
         </tr>
         <tr>
-          <td>Uliana</td>
+          <td id="wallet-address-3">Wallet ID</td>
           <td id="candidate-3"></td>
         </tr>
       </tbody>
     </table>
   </div>
+  <!--
   <input type="text" id="candidate" />
   <a href="#" onclick="voteForCandidate()" class="btn btn-primary">Vote</a>
-
-    </main><!-- /.container -->
-
-    <!-- Bootstrap core JavaScript
+  -->
+      <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
+
     <script src="./jquery-3.3.1.js" crossorigin="anonymous"></script>
     <script>window.jQuery || document.write('<script src="./jquery-3.3.1.js"><\/script>')</script>
+
     <script src="./bootstrap-4.1.0/assets/js/vendor/popper.min.js"></script>
     <script src="./bootstrap-4.1.0/dist/js/bootstrap.min.js"></script>
     <script src="./scripts.js"></script>
     <script src="./notify.js"></script>
     <script src="./index.js"></script>
     <script src="https://cdn.rawgit.com/ethereum/web3.js/develop/dist/web3.js"></script>
+
+    </main><!-- /.container -->
+
+
   </body>
 </html>

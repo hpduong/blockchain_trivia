@@ -45,12 +45,15 @@ $.getJSON(url)
   $('#b').text(data.results[0].incorrect_answers[1]);
   $('#c').text(data.results[0].incorrect_answers[2]);
   $('#d').text(data.results[0].correct_answer);
+  $('#wallet-address-1').text(web3.eth.accounts[0]);
+  $('#wallet-address-2').text(web3.eth.accounts[1]);
+  $('#wallet-address-3').text(web3.eth.accounts[2]);
+
   //$('#correct_answer').text(data.results[0].correct_answer);
   });
 };
 
 
-var urlTest = 'https://ron-swanson-quotes.herokuapp.com/v2/quotes'
 var url = 'https://opentdb.com/api.php?amount=1'
 //var xhrbtn = document.querySelector("#xhr");
 //var fetchbtn = document.querySelector("#fetch");
@@ -85,6 +88,14 @@ fetchbtn.addEventListener("click", function(){
   })
 });
 */
+
+function incrementScore() {
+  candidateName = "Anton";
+  contractInstance.voteForCandidate(candidateName, {from: web3.eth.accounts[0]}, function() {
+    let div_id = candidates[candidateName];
+    $("#" + div_id).html(contractInstance.totalVotesFor.call(candidateName).toString());
+  });
+}
 
 function getQuestion() {
   $.getJSON(url)
@@ -122,7 +133,8 @@ function isAnswer(idClicked) {
     console.log("you got it, dude!");
     $.notify("Yeah! You got it!", "success");
     $.notify("Stop! Hammer time", 'info');
-    $('#correct_answer').text("NICE!");
+    $('#correct_answer').text("NICE! +1");
+    incrementScore();
   } else {
     console.log("sorry, bud. WRONG!");
     $.notify("Sorry, maybe next time", "error");
