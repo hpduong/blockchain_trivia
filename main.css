@@ -142,3 +142,8 @@ button:hover {
   background:teal;
   color: white;
 }
+
+#question {
+  width: 40vw;
+  height: 4em;
+  }

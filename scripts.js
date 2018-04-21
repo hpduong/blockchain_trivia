@@ -40,7 +40,7 @@ $.getJSON(url)
   console.log(data);
   randomUl();
   randomUl();
-  $('#question').text(data.results[0].question);
+  $('#question').html(data.results[0].question);
   $('#a').text(data.results[0].incorrect_answers[0]);
   $('#b').text(data.results[0].incorrect_answers[1]);
   $('#c').text(data.results[0].incorrect_answers[2]);
@@ -103,7 +103,7 @@ function getQuestion() {
     randomUl();
     randomUl();
     console.log(data)
-    $('#question').text(data.results[0].question);
+    $('#question').html(data.results[0].question);
     $('#a').text(data.results[0].incorrect_answers[0]);
     $('#b').text(data.results[0].incorrect_answers[1]);
     $('#c').text(data.results[0].incorrect_answers[2]);
@@ -119,11 +119,11 @@ $('#newQ').click(function(){
     randomUl();
     randomUl();
     console.log(data)
-    $('#question').text(data.results[0].question);
-    $('#a').text(data.results[0].incorrect_answers[0]);
-    $('#b').text(data.results[0].incorrect_answers[1]);
-    $('#c').text(data.results[0].incorrect_answers[2]);
-    $('#d').text(data.results[0].correct_answer);
+    $('#question').html(data.results[0].question);
+    $('#a').html(data.results[0].incorrect_answers[0]);
+    $('#b').html(data.results[0].incorrect_answers[1]);
+    $('#c').html(data.results[0].incorrect_answers[2]);
+    $('#d').html(data.results[0].correct_answer);
     //$('#correct_answer').text(data.results[0].correct_answer);
   });
 });
